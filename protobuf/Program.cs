@@ -17,8 +17,11 @@ emp.CurrentAddress = new Address();
 emp.CurrentAddress.City = "Ankara";
 emp.CurrentAddress.StreetName = "Tunali Hilmi";
 emp.CurrentAddress.HouseNumber = 107;
+emp.Relatives.Add("Father", "Ali");
+emp.Relatives.Add("Mother", "Ayşe");
+emp.Relatives.Add("Sister", "Hayat");
 
-using(var output = File.Create("emp.dat"))
+using (var output = File.Create("emp.dat"))
 {
     emp.WriteTo(output);
 }
