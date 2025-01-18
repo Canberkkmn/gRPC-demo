@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/groomserver/bin/Debug/net9.0/groomserver.dll",
+            "program": "${workspaceFolder}/groomclient/bin/Debug/net9.0/groomclient.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/groomserver",
+            "cwd": "${workspaceFolder}/groomclient",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
