@@ -1,0 +1,2 @@
+obj/Debug/net9.0/protos/Employee.cs: /Users/ck/.nuget/packages/grpc.tools/2.69.0/build/native/include/google/protobuf/timestamp.proto\
+ protos/employee.proto
