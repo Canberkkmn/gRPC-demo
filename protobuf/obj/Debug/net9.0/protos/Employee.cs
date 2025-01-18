@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Grpc.Protpbuf.test {
+namespace Grpc.Protobuf.test {
 
   /// <summary>Holder for reflection information generated from protos/employee.proto</summary>
   public static partial class EmployeeReflection {
@@ -35,12 +35,12 @@ namespace Grpc.Protpbuf.test {
             "TkdMRRAAEgsKB01BUlJJRUQQARIMCghESVZPUkNFRBACEgkKBU9USEVSEAMi",
             "VAoHQWRkcmVzcxITCgtzdHJlZXRfbmFtZRgBIAEoCRIUCgxob3VzZV9udW1i",
             "ZXIYAiABKAUSDAoEY2l0eRgDIAEoCRIQCgh6aXBfY29kZRgEIAEoCUIVqgIS",
-            "R3JwYy5Qcm90cGJ1Zi50ZXN0YgZwcm90bzM="));
+            "R3JwYy5Qcm90b2J1Zi50ZXN0YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Protpbuf.test.Employee), global::Grpc.Protpbuf.test.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "BirthDate", "CurrentAddress", "PreviousEmployers", "MaritalStatus" }, null, new[]{ typeof(global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Protpbuf.test.Address), global::Grpc.Protpbuf.test.Address.Parser, new[]{ "StreetName", "HouseNumber", "City", "ZipCode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Protobuf.test.Employee), global::Grpc.Protobuf.test.Employee.Parser, new[]{ "Id", "FirstName", "LastName", "IsRetired", "BirthDate", "CurrentAddress", "PreviousEmployers", "MaritalStatus" }, null, new[]{ typeof(global::Grpc.Protobuf.test.Employee.Types.MaritalStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Protobuf.test.Address), global::Grpc.Protobuf.test.Address.Parser, new[]{ "StreetName", "HouseNumber", "City", "ZipCode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -66,7 +66,7 @@ namespace Grpc.Protpbuf.test {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Protpbuf.test.EmployeeReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Grpc.Protobuf.test.EmployeeReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,10 +165,10 @@ namespace Grpc.Protpbuf.test {
 
     /// <summary>Field number for the "current_address" field.</summary>
     public const int CurrentAddressFieldNumber = 6;
-    private global::Grpc.Protpbuf.test.Address currentAddress_;
+    private global::Grpc.Protobuf.test.Address currentAddress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Grpc.Protpbuf.test.Address CurrentAddress {
+    public global::Grpc.Protobuf.test.Address CurrentAddress {
       get { return currentAddress_; }
       set {
         currentAddress_ = value;
@@ -191,10 +191,10 @@ namespace Grpc.Protpbuf.test {
 
     /// <summary>Field number for the "marital_status" field.</summary>
     public const int MaritalStatusFieldNumber = 8;
-    private global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus maritalStatus_ = global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single;
+    private global::Grpc.Protobuf.test.Employee.Types.MaritalStatus maritalStatus_ = global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus MaritalStatus {
+    public global::Grpc.Protobuf.test.Employee.Types.MaritalStatus MaritalStatus {
       get { return maritalStatus_; }
       set {
         maritalStatus_ = value;
@@ -238,7 +238,7 @@ namespace Grpc.Protpbuf.test {
       if (birthDate_ != null) hash ^= BirthDate.GetHashCode();
       if (currentAddress_ != null) hash ^= CurrentAddress.GetHashCode();
       hash ^= previousEmployers_.GetHashCode();
-      if (MaritalStatus != global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single) hash ^= MaritalStatus.GetHashCode();
+      if (MaritalStatus != global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single) hash ^= MaritalStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -282,7 +282,7 @@ namespace Grpc.Protpbuf.test {
         output.WriteMessage(CurrentAddress);
       }
       previousEmployers_.WriteTo(output, _repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single) {
+      if (MaritalStatus != global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single) {
         output.WriteRawTag(64);
         output.WriteEnum((int) MaritalStatus);
       }
@@ -321,7 +321,7 @@ namespace Grpc.Protpbuf.test {
         output.WriteMessage(CurrentAddress);
       }
       previousEmployers_.WriteTo(ref output, _repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single) {
+      if (MaritalStatus != global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single) {
         output.WriteRawTag(64);
         output.WriteEnum((int) MaritalStatus);
       }
@@ -354,7 +354,7 @@ namespace Grpc.Protpbuf.test {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentAddress);
       }
       size += previousEmployers_.CalculateSize(_repeated_previousEmployers_codec);
-      if (MaritalStatus != global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single) {
+      if (MaritalStatus != global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MaritalStatus);
       }
       if (_unknownFields != null) {
@@ -389,12 +389,12 @@ namespace Grpc.Protpbuf.test {
       }
       if (other.currentAddress_ != null) {
         if (currentAddress_ == null) {
-          CurrentAddress = new global::Grpc.Protpbuf.test.Address();
+          CurrentAddress = new global::Grpc.Protobuf.test.Address();
         }
         CurrentAddress.MergeFrom(other.CurrentAddress);
       }
       previousEmployers_.Add(other.previousEmployers_);
-      if (other.MaritalStatus != global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus.Single) {
+      if (other.MaritalStatus != global::Grpc.Protobuf.test.Employee.Types.MaritalStatus.Single) {
         MaritalStatus = other.MaritalStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -441,7 +441,7 @@ namespace Grpc.Protpbuf.test {
           }
           case 50: {
             if (currentAddress_ == null) {
-              CurrentAddress = new global::Grpc.Protpbuf.test.Address();
+              CurrentAddress = new global::Grpc.Protobuf.test.Address();
             }
             input.ReadMessage(CurrentAddress);
             break;
@@ -451,7 +451,7 @@ namespace Grpc.Protpbuf.test {
             break;
           }
           case 64: {
-            MaritalStatus = (global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus) input.ReadEnum();
+            MaritalStatus = (global::Grpc.Protobuf.test.Employee.Types.MaritalStatus) input.ReadEnum();
             break;
           }
         }
@@ -498,7 +498,7 @@ namespace Grpc.Protpbuf.test {
           }
           case 50: {
             if (currentAddress_ == null) {
-              CurrentAddress = new global::Grpc.Protpbuf.test.Address();
+              CurrentAddress = new global::Grpc.Protobuf.test.Address();
             }
             input.ReadMessage(CurrentAddress);
             break;
@@ -508,7 +508,7 @@ namespace Grpc.Protpbuf.test {
             break;
           }
           case 64: {
-            MaritalStatus = (global::Grpc.Protpbuf.test.Employee.Types.MaritalStatus) input.ReadEnum();
+            MaritalStatus = (global::Grpc.Protobuf.test.Employee.Types.MaritalStatus) input.ReadEnum();
             break;
           }
         }
@@ -548,7 +548,7 @@ namespace Grpc.Protpbuf.test {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Protpbuf.test.EmployeeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.Protobuf.test.EmployeeReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

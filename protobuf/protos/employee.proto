@@ -4,7 +4,7 @@ package hr.entities;
 
 import "google/protobuf/timestamp.proto";
 
-option csharp_namespace = "Grpc.Protpbuf.test";
+option csharp_namespace = "Grpc.Protobuf.test";
 
 /* Represents the Employee entity, with a list of previous employers.
 Also, this definition contains the current address of the employee. */
