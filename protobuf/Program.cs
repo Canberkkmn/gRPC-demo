@@ -13,6 +13,10 @@ emp.BirthDate = Timestamp.FromDateTime(birthdate);
 emp.MaritalStatus = Employee.Types.MaritalStatus.Single;
 emp.PreviousEmployers.Add("adesso");
 emp.PreviousEmployers.Add("adesso Turkey");
+emp.CurrentAddress = new Address();
+emp.CurrentAddress.City = "Ankara";
+emp.CurrentAddress.StreetName = "Tunali Hilmi";
+emp.CurrentAddress.HouseNumber = 107;
 
 using(var output = File.Create("emp.dat"))
 {
