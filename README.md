@@ -1,4 +1,4 @@
-# gRCP-demo
+# gRPC-demo
 
 A chat system with a twist. Users can chat with each other similar to regular chat rooms. In addition, a special bot sends news flashes
 to the chat room, making users aware of important events happening in the world.

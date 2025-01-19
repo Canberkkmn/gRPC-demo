@@ -49,6 +49,10 @@ namespace gRoom.gRPC.Messages {
     static readonly grpc::Marshaller<global::gRoom.gRPC.Messages.RoomRegistrationRequest> __Marshaller_groom_RoomRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRoom.gRPC.Messages.RoomRegistrationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::gRoom.gRPC.Messages.RoomRegistrationResponse> __Marshaller_groom_RoomRegistrationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRoom.gRPC.Messages.RoomRegistrationResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRoom.gRPC.Messages.NewsFlash> __Marshaller_groom_NewsFlash = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRoom.gRPC.Messages.NewsFlash.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRoom.gRPC.Messages.NewsStreamStatus> __Marshaller_groom_NewsStreamStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRoom.gRPC.Messages.NewsStreamStatus.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::gRoom.gRPC.Messages.RoomRegistrationRequest, global::gRoom.gRPC.Messages.RoomRegistrationResponse> __Method_RegisterToRoom = new grpc::Method<global::gRoom.gRPC.Messages.RoomRegistrationRequest, global::gRoom.gRPC.Messages.RoomRegistrationResponse>(
@@ -57,6 +61,14 @@ namespace gRoom.gRPC.Messages {
         "RegisterToRoom",
         __Marshaller_groom_RoomRegistrationRequest,
         __Marshaller_groom_RoomRegistrationResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRoom.gRPC.Messages.NewsFlash, global::gRoom.gRPC.Messages.NewsStreamStatus> __Method_SendNewsFlash = new grpc::Method<global::gRoom.gRPC.Messages.NewsFlash, global::gRoom.gRPC.Messages.NewsStreamStatus>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "SendNewsFlash",
+        __Marshaller_groom_NewsFlash,
+        __Marshaller_groom_NewsStreamStatus);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +86,12 @@ namespace gRoom.gRPC.Messages {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::gRoom.gRPC.Messages.NewsStreamStatus> SendNewsFlash(grpc::IAsyncStreamReader<global::gRoom.gRPC.Messages.NewsFlash> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +100,8 @@ namespace gRoom.gRPC.Messages {
     public static grpc::ServerServiceDefinition BindService(GroomBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_RegisterToRoom, serviceImpl.RegisterToRoom).Build();
+          .AddMethod(__Method_RegisterToRoom, serviceImpl.RegisterToRoom)
+          .AddMethod(__Method_SendNewsFlash, serviceImpl.SendNewsFlash).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +112,7 @@ namespace gRoom.gRPC.Messages {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GroomBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_RegisterToRoom, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::gRoom.gRPC.Messages.RoomRegistrationRequest, global::gRoom.gRPC.Messages.RoomRegistrationResponse>(serviceImpl.RegisterToRoom));
+      serviceBinder.AddMethod(__Method_SendNewsFlash, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::gRoom.gRPC.Messages.NewsFlash, global::gRoom.gRPC.Messages.NewsStreamStatus>(serviceImpl.SendNewsFlash));
     }
 
   }
