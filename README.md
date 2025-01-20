@@ -13,4 +13,4 @@ It has three main components:
 
 ## Architecture
 
-![image](https://github.com/user-attachments/assets/2f892111-4562-4b44-bf53-6508ec9d8bd2)
+<img width="624" alt="image" src="https://github.com/user-attachments/assets/b31241b9-3bfc-4d0f-a245-c3da30afad3b" />
