@@ -14,3 +14,43 @@ It has three main components:
 ## Architecture
 
 <img width="624" alt="image" src="https://github.com/user-attachments/assets/b31241b9-3bfc-4d0f-a245-c3da30afad3b" />
+
+## How to run
+
+1. Clone the repository.
+2. Run the following command in groomserver:
+
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
+
+3. Run the following command in groomadmin:
+
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
+
+4. Run the following command in fullroomclient:
+
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
+
+5. Go to fullroomclient/publish folder and run fullroomclient.exe
+   5.1. Now you have 3 users (terminals). Admin, fullroomclient and fullroomclient.exe users.
+   5.2. Register fullroomclients to same room with different usernames.
+   5.3. Send message from one of the fullroomclients. You should see the message in other fullroomclient and in groomadmin.
+
+6. Run the following command in newsbot:
+
+```bash
+node client.js
+```
+
+7. You should see the news in groomadmin and fullroomclient. Please note that you won't see the duplicated news.

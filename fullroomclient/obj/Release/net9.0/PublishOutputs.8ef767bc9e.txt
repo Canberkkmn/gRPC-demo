@@ -1,0 +1,10 @@
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/fullroomclient
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/fullroomclient.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/fullroomclient.runtimeconfig.json
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/fullroomclient.pdb
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/Google.Protobuf.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/Grpc.Core.Api.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/Grpc.Net.Client.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/Grpc.Net.Common.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/ck/Desktop/Senior/gRCP-demo/fullroomclient/publish/fullroomclient.deps.json
