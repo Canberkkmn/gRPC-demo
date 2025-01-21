@@ -60,14 +60,27 @@ var task = Task.Run(async () =>
 
     while (true)
     {
-        if (await call.ResponseStream.MoveNext(cts.Token))
+        try
         {
-            var msg = call.ResponseStream.Current;
-            var left = Console.CursorLeft - promptText.Length;
-            PrintMessage(msg);
-        }
 
-        await Task.Delay(500);
+
+            if (await call.ResponseStream.MoveNext(cts.Token))
+            {
+                var msg = call.ResponseStream.Current;
+                var left = Console.CursorLeft - promptText.Length;
+                PrintMessage(msg);
+            }
+
+            await Task.Delay(500);
+        }
+        catch (Grpc.Core.RpcException ex)
+        {
+            if (ex.StatusCode == Grpc.Core.StatusCode.Cancelled)
+            {
+                Console.WriteLine("Chat cancelled!");
+                break;
+            }
+        }
     }
 });
 
@@ -77,12 +90,20 @@ while (true)
     var input = Console.ReadLine();
     RestoreInputCursor();
 
-    var reqMsg = new ChatMessage();
-    reqMsg.Contents = input;
-    reqMsg.MsgTime = Timestamp.FromDateTime(DateTime.UtcNow);
-    reqMsg.Room = room;
-    reqMsg.User = username;
-    call.RequestStream.WriteAsync(reqMsg);
+    if (input == "X")
+    {
+        cts.Cancel();
+        Console.WriteLine("Chat cancelled!");
+    }
+    else
+    {
+        var reqMsg = new ChatMessage();
+        reqMsg.Contents = input;
+        reqMsg.MsgTime = Timestamp.FromDateTime(DateTime.UtcNow);
+        reqMsg.Room = room;
+        reqMsg.User = username;
+        call.RequestStream.WriteAsync(reqMsg);
+    }
 }
 
 // Utilities methods for positioning the cursor
