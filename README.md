@@ -43,9 +43,10 @@ dotnet run
 ```
 
 5. Go to fullroomclient/publish folder and run fullroomclient.exe
-   5.1. Now you have 3 users (terminals). Admin, fullroomclient and fullroomclient.exe users.
-   5.2. Register fullroomclients to same room with different usernames.
-   5.3. Send message from one of the fullroomclients. You should see the message in other fullroomclient and in groomadmin.
+
+- Now you have 3 users (terminals). Admin, fullroomclient and fullroomclient.exe users.
+- Register fullroomclients to same room with different usernames.
+- Send message from one of the fullroomclients. You should see the message in other fullroomclient and in groomadmin.
 
 6. Run the following command in newsbot:
 
